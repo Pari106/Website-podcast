@@ -1,0 +1,145 @@
+
+body{
+background-color:#ddd2e0;
+}
+body{color:#2B3040}
+
+header{
+overflow: hidden;
+background-color: #C8C1D7;
+padding: 0.7em 0.7em;
+border: 0cap;
+border-radius: 2em;
+}
+
+header a.thuis{float: middle;
+    color: #255957;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 25px; 
+    line-height: 25px;
+    border-radius: 4px;}
+
+    header a.over{float: middle;
+    color: #255957;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 25px; 
+    line-height: 25px;
+    border-radius: 4px;}
+
+    header a.afl{float: middle;
+        color: #255957;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 25px; 
+        line-height: 25px;
+        border-radius: 4px;}    
+
+        header a.sugg{float: middle;
+            color: #255957;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 25px; 
+            line-height: 25px;
+            border-radius: 4px;}  
+
+       
+
+header {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+header a:hover {
+    background-color:#bfb4d5 ;
+    border: 0cap;
+    border-radius: 1em;
+}
+
+
+img {
+    border: 0.7em solid #A5B685;
+    border-radius: 2em;
+}
+
+img{box-shadow: 10px 10px 10px 5px #C8C1D7;}
+
+button {
+    background-color: #A5B685; 
+    border: none;
+    color: #2B3040;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+
+button:hover span {
+    padding-right: 25px;
+  }
+
+  button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+    
+    h1{
+        font-family: "Literata", serif;
+  font-weight: 600; 
+  font-style: bold;
+      }
+
+    h2{
+        font-family: "Literata", serif;
+  font-weight: 400; 
+  font-style: normal;
+        }
+
+
+      p {
+        font-family: "Rubik", sans-serif;
+        font-weight: 400;
+      }
+
+      a{
+        color: #255957;
+      }
+
+     ul{list-style: none;
+    padding-left: 0%;
+  }
+ 
+ul{gap: 20px;}
+
+    ul{display: flex;
+    justify-content: center;
+    }
+
+    
+  

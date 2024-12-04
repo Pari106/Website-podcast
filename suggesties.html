@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggesties</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav> 
+            <a class="thuis" href="index.html" >home</a>
+            <a class="over" href="overons.html" >over ons</a>
+            <a class="afl" href="afleveringen.html" >afleveringen</a>
+            <a class="sugg" href="suggesties.html" >suggesties</a>
+        </nav>
+        </header>
+
+<h1>Jouw suggestie</h1>
+
+        <p>Heb jij een favoriete slechterik die je graag in Het Masker Af wilt horen? Of een thema dat we echt niet mogen overslaan? Laat het ons weten! Stuur jouw suggestie in, en wie weet hoor je binnenkort jouw verzoek terug in een speciale “luisteraarskeuze”-aflevering. Of het nu gaat om een iconische schurk, een spannend nieuw thema, of een psychologische twist die je graag onderzocht wilt zien - wij zijn benieuwd naar jouw ideeën.</p>
+
+
+    <form action="https://webhook.site/85944674-ec20-438f-8302-f1139f1832af" method="POST" target="hidden_iframe" onsubmit="redirectToThanks()">
+        <label for="fname">(Bij)naam*:</label>
+        <input type="text" id="fname" name="fname" required><br><br>
+        <label for="lname">Suggestie:</label>
+        <input type="text" id="lname" name="lname" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+<p>(*Vul hier eventueel een (bij)naam in, zodat we je in de podcast kunnen noemen.)
+
+</p>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <script>
+        function redirectToThanks() {
+            event.preventDefault();
+            window.location.href ="bedankt.html";
+        }
+    </script>
+</body>
+</html>
