@@ -1,145 +1,307 @@
 
-body{
-background-color:#ddd2e0;
-}
-body{color:#2B3040}
-
-header{
-overflow: hidden;
-background-color: #C8C1D7;
-padding: 0.7em 0.7em;
-border: 0cap;
-border-radius: 2em;
+/* ===== Body Styling ===== */
+body {
+  background-color: #ddd2e0;
+  color: #2B3040;
 }
 
-header a.thuis{float: middle;
-    color: #255957;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 25px; 
-    line-height: 25px;
-    border-radius: 4px;}
 
-    header a.over{float: middle;
-    color: #255957;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 25px; 
-    line-height: 25px;
-    border-radius: 4px;}
 
-    header a.afl{float: middle;
-        color: #255957;
-        text-align: center;
-        padding: 12px;
-        text-decoration: none;
-        font-size: 25px; 
-        line-height: 25px;
-        border-radius: 4px;}    
+main > h1 {
+  flex: 0 0 100%; /* Zorg dat de titel altijd een volledige breedte neemt */
+  text-align: center; /* Optioneel: centreren van de titel */
+  margin-bottom: 20px; /* Ruimte onder de titel */
+}
 
-        header a.sugg{float: middle;
-            color: #255957;
-            text-align: center;
-            padding: 12px;
-            text-decoration: none;
-            font-size: 25px; 
-            line-height: 25px;
-            border-radius: 4px;}  
+/* Algemene styling voor main */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px; /* Ruimte tussen artikelen */
+  justify-content: center; /* Artikelen centreren */
+  padding: 20px; /* Ruimte tussen de rand van het scherm en de inhoud */
+  box-sizing: border-box; /* Zorg dat padding meetelt in de totale breedte */
+}
 
-       
+/* Artikelen consistent maken: twee naast elkaar */
+main article {
+  flex: 1 1 calc(50% - 40px); /* Twee artikelen naast elkaar */
+  max-width: calc(50% - 40px); /* Voorkom dat ze breder worden dan 50% */
+  box-sizing: border-box;
+  text-align: center;
+  padding: 15px; /* Binnenruimte in het artikel */
+  background-color: #d4c6d8;
+  border-radius: 0.5em; /* Optioneel: afgeronde hoeken */
+}
 
+/* Afbeeldingen vierkant en consistent maken */
+main article img {
+  width: 16em; /* Pas dit aan voor de gewenste grootte */
+  height: 16em;
+  object-fit: cover; /* Zorg dat de afbeelding volledig past zonder te vervormen */
+  border-radius: 0.5em; /* Optioneel: afgeronde hoeken */
+  margin-bottom: 10px; /* Ruimte onder de afbeelding */
+}
+
+/* Ruimte tussen teksten */
+main article p {
+  margin: 10px 0; /* Zorg voor wat ruimte tussen de teksten */
+}
+
+
+
+
+
+/* ===== Header Styling ===== */
 header {
-    font-size: 25px;
-    font-weight: bold;
-  }
-
-header a:hover {
-    background-color:#bfb4d5 ;
-    border: 0cap;
-    border-radius: 1em;
+  background-color: #cbb6d1;
+  padding: 10px 20px;
+  border-radius: 2em;
 }
 
+header img {
+  border: 0;
+}
 
+/* ===== Navigation Styling ===== */
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Trocchi", serif;
+}
+
+nav ul li:first-of-type {
+  margin-right: auto; /* Zorgt dat het logo links blijft */
+}
+
+nav ul li img {
+  height: 60px;
+  object-fit: contain;
+  display: block;
+  border-radius: 0.5em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #255957;
+  padding: 12px;
+  font-size: 25px;
+  line-height: 25px;
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #ddd2e0;
+  border-radius: 1em;
+}
+
+/* ===== General Image Styling ===== */
 img {
-    border: 0.7em solid #A5B685;
-    border-radius: 2em;
+  border: 0.7em solid #A5B685;
+  border-radius: 0;
+  transition: transform 2s, box-shadow 2s;
 }
 
-img{box-shadow: 10px 10px 10px 5px #C8C1D7;}
-
-button {
-    background-color: #A5B685; 
-    border: none;
-    color: #2B3040;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
+#index-page img{
+  box-shadow: 10px 10px 10px 5px #C8C1D7;
 }
 
-button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
+#index-page img:hover {
+  transform: scale(1.3);
+}
+
+
+/* ===== h3 and Specific ul Styling ===== */
+h3 + ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
+h3 + ul a {
+  background-color: #A5B685;
+  border: none;
+  color: #2B3040;
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  display: inline-block;
+}
+
+h3 + ul a span {
+  position: relative;
+  padding-right: 0;
+  transition: padding-right 0.5s ease;
+}
+
+h3 + ul a span:after {
+  content: '\00bb'; /* Pijltje (») */
+  position: absolute;
+  opacity: 0;
+  right: -10px;
+  transition: opacity 0.5s ease, right 0.5s ease;
+}
+
+h3 + ul a:hover span {
+  padding-right: 15px;
+}
+
+h3 + ul a:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* ===== Typography ===== */
+h1 {
+  font-family: "Literata", serif;
+  font-weight: 600;
+}
+
+h2 {
+  font-family: "Literata", serif;
+  font-weight: 400;
+}
+
+p {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  color: #255957;
+  text-decoration: none; 
+}
+
+/* ===== General ul Styling ===== */
+ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Ruimte tussen items */
+}
+
+
+/* ===== Body Styling voor de Indexpagina ===== */
+#index-page {
+  background-color: #ddd2e0; /* Specifieke achtergrondkleur voor index */
+}
+
+/* ===== Stijlen voor de Indexpagina ===== */
+#index-page main {
+  display: flex;
+  flex-direction: column; /* Dit zorgt voor een verticaal uitgelijnde indeling */
+  gap: 40px;
+  padding: 20px;
+}
+
+#index-page section {
+  padding: 20px;
+  background-color: #cbb6d1;
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#index-page h1, #index-page h2, #index-page p {
+  text-align: center;
+}
+
+#index-page ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ===== Body Styling voor de Over ons pagina ===== */
+#overons-page {
+  background-color: #ddd2e0; /* Specifieke achtergrondkleur voor over ons pagina */
+}
+
+
+#overons-page main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+
+#overons-page section {
+  padding: 20px;
+  background-color: #cbb6d1;
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#overons-page h1, #overons-page h2, #overons-page p {
+  text-align: center;
+}
+
+#overons-page ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#overons-page img {
+  position: relative;  /* Zodat het plaatje kan bewegen */
+  animation: none;  /* In eerste instantie start de animatie niet */
+  transition: border-color 0.3s;  
+}
+
+#overons-page img:hover {
+  animation: simon 5s 1 forwards;  
+}
+
+@keyframes simon {
+  0% {
+    transform: translateX(0);  /* Start links */
+    border-color: #A5B685;  /* Begint met originele groene rand */
   }
-  
-  button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
+  25% {
+    transform: translateX(25vw);  
+    border-color: #85b6b4;  
   }
-  
-
-button:hover span {
-    padding-right: 25px;
+  50% {
+    transform: translateX(50vw);  
+    border-color: #8985b6;  
   }
-
-  button:hover span:after {
-    opacity: 1;
-    right: 0;
+  100% {
+    transform: translateX(70vw);  /* Eindigt rechts */
+    border-color: #b685ab;  /* Eindigt met een soort paarse kleur */
   }
-    
-    h1{
-        font-family: "Literata", serif;
-  font-weight: 600; 
-  font-style: bold;
-      }
-
-    h2{
-        font-family: "Literata", serif;
-  font-weight: 400; 
-  font-style: normal;
-        }
+}
 
 
-      p {
-        font-family: "Rubik", sans-serif;
-        font-weight: 400;
-      }
 
-      a{
-        color: #255957;
-      }
 
-     ul{list-style: none;
-    padding-left: 0%;
-  }
- 
-ul{gap: 20px;}
+/* Algemene stijlen die van toepassing zijn op beide pagina's */
+#overons-page h1, #index-page h1 {
+  font-family: "Literata", serif;
+  font-weight: 600;
+  text-align: center;
+}
 
-    ul{display: flex;
-    justify-content: center;
-    }
+#overons-page h2, #index-page h2 {
+  font-family: "Literata", serif;
+  font-weight: 400;
+  text-align: center;
+}
 
-    
-  
+#overons-page p, #index-page p {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
