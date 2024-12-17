@@ -1,0 +1,326 @@
+
+/* Globale styling */
+body {
+  background-color: #ddd2e0;
+  color: #2B3040;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Literata", serif;
+  text-align: center;
+  color: #255957;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 35px;
+  margin: 0;
+}
+
+h2, h3 {
+  font-weight: 400;
+}
+
+h4 {
+  transition: transform 2s, font-style 2s;
+  transform: scale(1.3);
+}
+
+h4:hover {
+  font-style: italic;
+  transform: scale(2);
+}
+
+p {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+a {
+  color: #c65792;
+  text-decoration: none;
+}
+
+img {
+  border: 0.7em solid #A5B685;
+  border-radius: 0;
+  transition: transform 2s, box-shadow 2s;
+}
+
+/* Styling header */
+header {
+  background-color: #cbb6d1;
+  padding: 10px 20px;
+  border-radius: 2em;
+}
+
+header img {
+  border: 0;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Trocchi", serif;
+}
+
+nav ul li:first-of-type {
+  margin-right: auto;
+}
+
+nav ul li img {
+  height: 60px;
+  object-fit: contain;
+  display: block;
+  border-radius: 0.5em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #255957;
+  padding: 12px;
+  font-size: 25px;
+  line-height: 25px;
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #ddd2e0;
+  border-radius: 1em;
+}
+
+/* Styling secties */
+section {
+  padding: 1.5em;
+  margin: 1em;
+  background-color: #cbb6d1;
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section:last-of-type {
+  position: relative;
+  text-align: center;
+}
+
+section:last-of-type p {
+  text-align: left;
+  margin-right: 20px;
+  display: inline-block;
+  width: calc(100% - 100px);
+}
+
+section:last-of-type img {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  border: none;
+}
+
+section a:hover {
+  color: whitesmoke;
+}
+
+/* Styling voor specefieke paginas */
+#afleveringen-page main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#afleveringen-page main > h1 {
+  flex: 0 0 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#afleveringen-page main article {
+  flex: 1 1 calc(50% - 40px);
+  max-width: calc(50% - 40px);
+  box-sizing: border-box;
+  text-align: center;
+  padding: 15px;
+  background-color: #cbb6d1;
+  border-radius: 0.5em;
+}
+
+#afleveringen-page main article img {
+  width: 16em;
+  height: 16em;
+  object-fit: cover;
+  border-radius: 0.5em;
+  margin-bottom: 10px;
+}
+
+#afleveringen-page section:last-of-type img:hover {
+  animation: loopje 5s ease-in-out infinite;
+}
+
+#afleveringen-page main article p {
+  margin: 10px 0;
+}
+
+#index-page main img[alt="Illustratie van schurken"] {
+  box-shadow: 10px 10px 10px 5px #C8C1D7;
+}
+
+#index-page main img[alt="Illustratie van schurken"]:hover {
+  transform: scale(1.3);
+}
+
+#index-page section:last-of-type img:hover {
+  animation: loopje 1s ease-in-out infinite;
+}
+
+#overons-page main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+
+#overons-page ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#overons-page img {
+  position: relative;
+  animation: none;
+  transition: border-color 0.3s;
+}
+
+#overons-page section:last-of-type {
+  position: relative;
+  text-align: center;
+  padding: 1.5em;
+  margin: 1em;
+  background-color: #cbb6d1;
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#overons-page section:last-of-type p {
+  text-align: left;
+  margin-right: 100px;
+  display: inline-block;
+  width: calc(100% - 100px);
+}
+
+#overons-page section:last-of-type img {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  border: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+#overons-page section:last-of-type img:hover {
+  animation: wiebelen 0.5s ease-in-out infinite;
+}
+
+#overons-page img[alt="Portretfoto van Simon Cowell"]:hover,
+#overons-page img[alt="Portretfoto van John Watson"]:hover {
+  animation: hosts 5s 1 forwards;
+}
+
+#trailer-page section:last-of-type img:hover {
+  animation: draait 2s infinite ease-in-out;
+}
+
+/* Animaties */
+@keyframes loopje {
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+
+@keyframes wiebelen {
+  0%, 100% { transform: translateY(-50%) rotate(0deg); }
+  25% { transform: translateY(-50%) rotate(5deg); }
+  75% { transform: translateY(-50%) rotate(-5deg); }
+}
+
+@keyframes hosts {
+  0% { transform: translateX(0); border-color: #A5B685; }
+  25% { transform: translateX(25vw); border-color: #85b6b4; }
+  60% { transform: translateX(50vw); border-color: #8985b6; }
+  100% { transform: translateX(65vw); border-color: #b685ab; }
+}
+
+@keyframes draait {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(90deg); }
+  50% { transform: rotate(180deg); }
+  75% { transform: rotate(270deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Podcast Links */
+h3 + ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+h3 + ul a {
+  background-color: #A5B685;
+  border: none;
+  color: #2B3040;
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  display: inline-block;
+}
+
+h3 + ul a span {
+  position: relative;
+  padding-right: 0;
+  transition: padding-right 0.5s ease;
+}
+
+h3 + ul a span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  right: -10px;
+  transition: opacity 0.5s ease, right 0.5s ease;
+}
+
+h3 + ul a:hover span {
+  padding-right: 15px;
+}
+
+h3 + ul a:hover span:after {
+  opacity: 1;
+  right: 0;
+}
